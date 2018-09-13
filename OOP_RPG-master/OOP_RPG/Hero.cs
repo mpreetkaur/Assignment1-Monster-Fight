@@ -6,6 +6,7 @@ namespace OOP_RPG
 {
     public class Hero
     {
+        public int Gold { get; set; }
         /*This is a Constructor.
         When we create a new object from our Hero class, the instance of this class, our hero, has:
         an empty List that has to contain instances of the Armor class,
@@ -20,6 +21,8 @@ namespace OOP_RPG
             this.Defense = 10;
             this.OriginalHP = 30;
             this.CurrentHP = 30;
+            this.Gold = 0;
+
         }
         
         // These are the Properties of our Class.
