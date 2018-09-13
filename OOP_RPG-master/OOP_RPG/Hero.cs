@@ -43,8 +43,10 @@ namespace OOP_RPG
             Console.WriteLine("Strength: " + this.Strength);
             Console.WriteLine("Defense: " + this.Defense);
             Console.WriteLine("Hitpoints: " + this.CurrentHP + "/" + this.OriginalHP);
+            Console.WriteLine("gold: " + this.Gold);
+
         }
-        
+
         public void ShowInventory() {
             Console.WriteLine("*****  INVENTORY ******");
             Console.WriteLine("Weapons: ");

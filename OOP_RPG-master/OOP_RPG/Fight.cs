@@ -16,9 +16,9 @@ namespace OOP_RPG
             this.hero = hero;
             this.game = game;
             this.AddMonster("Squid", 9, 8, 20);
-            this.AddMonster("Ninja", 13, 15, 40);
+            this.AddMonster("Ninja", 13, 15, 15);
             this.AddMonster("Pikachu", 5, 17, 10);
-            this.AddMonster("Turtle", 9, 21, 35);
+            this.AddMonster("Turtle", 9, 21, 25);
             var enemy = this.Monsters[0];
             var lastEnemy = this.Monsters.Last();
             var secondEnemy = this.Monsters.ElementAt(1);
@@ -104,6 +104,7 @@ namespace OOP_RPG
         public void Lose() {
             Console.WriteLine("You've been defeated! :( GAME OVER.");
             return;
+            //Console.ReadLine();
         }
         
     }

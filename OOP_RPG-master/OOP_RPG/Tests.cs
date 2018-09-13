@@ -6,7 +6,7 @@ namespace OOP_RPG
             public static void Run() {
                 
                 var hero = new Hero();
-                hero.Strength = 55;
+                hero.Strength = 65;
                 
                 Console.WriteLine("Hero's strength: " + hero.Strength);
                 

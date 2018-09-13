@@ -18,7 +18,10 @@ namespace OOP_RPG
             this.Defense = defense;
             this.OriginalHP = originalHP;
             this.CurrentHP = currentHP;
-            this.Gold = 5;
+            //this.Gold = 5;
+
+            var random = new Random();
+            this.Gold = random.Next(100);
         }
     }
 }
