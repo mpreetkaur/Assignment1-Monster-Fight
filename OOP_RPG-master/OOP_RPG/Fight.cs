@@ -15,10 +15,10 @@ namespace OOP_RPG
             this.Monsters = new List<Monster>();
             this.hero = hero;
             this.game = game;
-            this.AddMonster("Squid", 9, 8, 20);
-            this.AddMonster("Ninja", 13, 15, 15);
+            this.AddMonster("Squid", 9, 8, 12);
+            this.AddMonster("Ninja", 13, 15, 8);
             this.AddMonster("Pikachu", 5, 17, 10);
-            this.AddMonster("Turtle", 9, 21, 25);
+            this.AddMonster("Turtle", 9, 21, 5);
             var enemy = this.Monsters[0];
             var lastEnemy = this.Monsters.Last();
             var secondEnemy = this.Monsters.ElementAt(1);
@@ -40,9 +40,13 @@ namespace OOP_RPG
             Console.WriteLine("You've encountered a " + monster.Name + "! " + monster.Strength + " Strength/" + monster.Defense + " Defense/" +
             monster.CurrentHP + " HP. What will you do?");
             Console.WriteLine("1. Fight");
+            Console.WriteLine("2. Escape Monster");
             var input = Console.ReadLine();
             if (input == "1") {
                 this.HeroTurn();
+            }
+            else if (input == "2") {
+                this.RunFromMonster();
             }
             else { 
                 this.game.Main();
@@ -93,6 +97,19 @@ namespace OOP_RPG
            {
                this.Start();
            }
+        }
+        public void RunFromMonster()
+        {
+            if (hero.Speed > monster.Speed)
+            {
+                Console.WriteLine("You escaped from " + monster.Name);
+                this.game.Main();
+            }
+            else
+            {
+                Console.WriteLine("You are slower than " + monster.Name);
+                this.Start();
+            }
         }
         
         public void Win() {
