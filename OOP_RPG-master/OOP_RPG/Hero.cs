@@ -48,6 +48,7 @@ namespace OOP_RPG
             Console.WriteLine("Defense: " + this.Defense);
             Console.WriteLine("Hitpoints: " + this.CurrentHP + "/" + this.OriginalHP);
             Console.WriteLine("gold: " + this.Gold);
+            Console.WriteLine("Speed: " + this.Speed);
 
         }
 
